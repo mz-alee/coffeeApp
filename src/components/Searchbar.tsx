@@ -1,10 +1,9 @@
 import React from 'react'
-import { Image, StyleSheet, TextInput, View } from 'react-native'
-import SearchIcon from '../assets/icons/clock.png';
+import { StyleSheet, TextInput, View } from 'react-native'
+
 const Searchbar = () => {
   return (
     <View style={styles.searchContainer}>
-      <SearchIcon width={120} />
       <TextInput style={styles.searchField} />
     </View>
   )
@@ -20,9 +19,5 @@ const styles = StyleSheet.create({
     width: 310,
   },
   searchField: {
-  },
-  searchImage: {
-    backgroundColor: "red",
-    color: "blue"
   }
 })

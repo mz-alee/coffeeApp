@@ -8,12 +8,12 @@ const Items = () => {
         source={require('../assets/bg2.jpeg')}
         style={styles.productImage}
       />
-      {/* <Text style={styles.textStyle}>
+      <Text style={styles.textStyle}>
         productssss
       </Text>
       <Text style={styles.textStyle}>
         productssss
-      </Text> */}
+      </Text>
       <View style={styles.info}>
         <Text style={styles.title}>
           cappuccino

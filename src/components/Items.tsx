@@ -1,9 +1,14 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const Items = () => {
+  const navigation = useNavigation();
   return (
-    <View style={styles.main}>
+    <TouchableOpacity
+      style={styles.main}
+      onPress={() => navigation.navigate('productDetail')}
+    >
       <Image
         source={require('../assets/bg2.jpeg')}
         style={styles.productImage}
@@ -26,7 +31,7 @@ const Items = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 
@@ -40,6 +45,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 140,
     borderWidth: 1,
+    marginHorizontal: 3,
     borderRadius: 20,
     padding: 9,
     display: 'flex',

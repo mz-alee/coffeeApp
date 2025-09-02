@@ -12,12 +12,12 @@ const Header = () => {
         <View style={styles.profile}>
         </View>
       </View>
-        <Text style={styles.title}>
-          Find the best coffee for you
-        </Text>
-        <View style={styles.searchContainer}>
-        <Searchbar/>
-        </View>
+      <Text style={styles.title}>
+        Find the best coffee for you
+      </Text>
+      <View style={styles.searchContainer}>
+        <Searchbar />
+      </View>
     </View>
   )
 }
@@ -33,9 +33,9 @@ const styles = StyleSheet.create({
     height: 270,
     display: 'flex',
     flexDirection: 'column',
-    
+
   },
-  title:{
+  title: {
     fontSize: 30,
     fontWeight: 'bold',
     color: 'white',
@@ -76,9 +76,9 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     marginTop: 10,
-    display:'flex',
+    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding:3,
+    padding: 3,
   }
 })

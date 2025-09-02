@@ -1,6 +1,6 @@
 import React from 'react'
 import Items from './Items'
-import { ScrollView, StyleSheet } from 'react-native'
+import { ScrollView, StyleSheet, View } from 'react-native'
 
 const ScrollRow = () => {
     return (
@@ -22,13 +22,14 @@ const ScrollRow = () => {
 export default ScrollRow
 const styles = StyleSheet.create({
     scrollContainer: {
+        // backgroundColor: 'red',
         borderStartColor: 'red',
         display: 'flex',
         flexDirection: 'row',
-        gap:10,
+        gap: 10,
         marginTop: 10,
-        paddingHorizontal: 30,
-        width: "100%",
+        // paddingHorizontal: 30,
+        width: "85%",
     }
 
 });

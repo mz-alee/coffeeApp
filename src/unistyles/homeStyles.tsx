@@ -1,4 +1,4 @@
-import { RFValue } from "react-native-responsive-fontsize";
+`import { RFValue } from "react-native-responsive-fontsize";
 import { createStyleSheet } from "react-native-unistyles";
 import { isBannerHeight } from "./Constants";
 import { Platform } from "react-native";

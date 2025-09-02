@@ -1,8 +1,10 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, View, Text } from 'react-native';
+import { ImageBackground, StyleSheet, View, Text, ScrollView } from 'react-native';
 import Header from '../components/Header';
 import Items from '../components/Items';
 import Searchbar from '../components/Searchbar';
+import Filters from '../components/Filters';
+import ScrollRow from '../components/ScrollRow';
 
 export default function StartupScreen() {
   return (
@@ -10,11 +12,9 @@ export default function StartupScreen() {
       style={styles.background}
     >
       <Header />
-      <Searchbar />
-      <Items />
-      <View style={styles.overlay}>
-        <Text style={styles.text}>Welcome to the Caféee ☕</Text>
-      </View>
+      <Filters />
+      <ScrollRow />
+      <ScrollRow />
     </View>
   );
 }
@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     backgroundColor: '#0C0F14',
-    // justifyContent: 'center',
     paddingTop: 20,
     alignItems: 'center',
   },
@@ -36,4 +35,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#fff',
   },
+  scrollContainer: {
+    borderStartColor: 'red',
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: 10,
+    gap: 30,
+    paddingHorizontal: 30,
+    width: "100%",
+  }
+
 });

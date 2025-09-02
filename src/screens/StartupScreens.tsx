@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, ImageBackground, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 const StartupScreen = () => {
 
@@ -20,7 +20,9 @@ const StartupScreen = () => {
       <Text style={styles.subtitle}>
         Welcome to our cozy coffee corner, where every cup is a delightful for you...........
       </Text>
-      <TouchableOpacity style={styles.button} onPress={handleStart}>
+      <TouchableOpacity style={styles.button} onPress={()=>{
+        handleStart()
+      }}>
         <Text style={styles.buttonText}>Get Started</Text>
       </TouchableOpacity>
     </View>
@@ -57,6 +59,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     borderRadius: 12,
     alignItems: 'center',
+    marginBottom: 30,
   },
   buttonText: {
     color: '#fff',

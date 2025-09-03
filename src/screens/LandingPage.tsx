@@ -11,7 +11,9 @@ export default function StartupScreen() {
     <View
       style={styles.background}
     >
-      <Header />
+      <Header 
+       showSearchbar={true}
+       />
       <Filters />
       <ScrollRow />
       <ScrollRow />

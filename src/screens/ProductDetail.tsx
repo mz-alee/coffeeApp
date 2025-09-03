@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const ProductDetail = () => {
   const [selectedSize, setSelectedSize] = useState(250);
@@ -62,8 +63,11 @@ const ProductDetail = () => {
         <View style={styles.cartContainer}>
           <View style={styles.priceContainer}>
             <Text style={styles.sizeText}>price</Text>
-            <Text style={styles.coffeName}> 10.5</Text>
+            <Text style={styles.coffeName}><FontAwesome5 name="dollar-sign" size={20} color="#D17842" /> 10.5</Text>
           </View>
+          <TouchableOpacity style={styles.cartBtn}>
+            <Text style={{ color: 'white', fontWeight: '700' }}>Add to cart</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -79,7 +83,9 @@ const styles = StyleSheet.create({
     height: 120,
     width: '100%',
     backgroundColor: '#05050584',
-    bottom: 20,
+    borderTopStartRadius: 25,
+    borderTopEndRadius: 25,
+    bottom: 0,
     position: 'absolute',
     padding: 12,
     flexDirection: "row",
@@ -163,10 +169,24 @@ const styles = StyleSheet.create({
     height:70,
     width:'100%',
     backgroundColor:'#141921',
+    flexDirection:'row',
+    // justifyContent:'space-between',
+    alignItems:'center',
+    gap:32,
+    // paddingHorizontal:20,
     marginTop:5,
   },
   priceContainer:{
     display:'flex',
-    
+    width:"30%",
+    alignItems:'center',
+  },
+  cartBtn:{
+    backgroundColor:'#D17842',
+    height:50,
+    width:'60%',
+    borderRadius:15,
+    justifyContent:'center',
+    alignItems:'center',
   }
 })

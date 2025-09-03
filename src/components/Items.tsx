@@ -7,13 +7,13 @@ const Items = () => {
   return (
     <TouchableOpacity
       style={styles.main}
-      onPress={() => navigation.navigate('productDetail')}
+      onPress={() => navigation.navigate('cart')}
     >
       <Image
         source={require('../assets/bg2.jpeg')}
         style={styles.productImage}
       />
-      <View style={styles.info}>
+      <View style={styles.info}>  
         <Text style={styles.title}>
           cappuccino
         </Text>

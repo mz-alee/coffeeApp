@@ -7,7 +7,7 @@ const Items = () => {
   return (
     <TouchableOpacity
       style={styles.main}
-      onPress={() => navigation.navigate('cart')}
+      onPress={() => navigation.navigate( 'ProductDetail' as never)}
     >
       <Image
         source={require('../assets/bg2.jpeg')}
@@ -89,7 +89,8 @@ const styles = StyleSheet.create({
   },
   cartButton: {
     backgroundColor: '#d17842',
-    width: 20,
+    width: 23,
+    height:20,
     display: 'flex',
     alignItems: 'center',
     borderRadius: 4,

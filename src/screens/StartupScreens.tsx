@@ -6,7 +6,7 @@ const StartupScreen = () => {
   const navigation = useNavigation();
 
   const handleStart = () => {
-    navigation.navigate('Landing');
+   navigation.navigate('MainTabs', { screen: 'Landing' })
   };
 
   return (

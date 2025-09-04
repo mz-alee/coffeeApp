@@ -42,7 +42,6 @@ export default Header
 
 const styles = StyleSheet.create({
   main: {
-    // backgroundColor:"red",
     display: 'flex',
     flexDirection: 'column',
 
@@ -53,12 +52,12 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'left',
     marginLeft: 30,
-    marginTop: 20,
+    marginTop: 10,
     width: 230,
   },
   inner: {
     width: "100%",
-    marginTop: 30,
+    marginTop: 20,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',

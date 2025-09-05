@@ -3,7 +3,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Ionicons } from "@expo/vector-icons"; // 👈 using Expo icons
+import { Ionicons } from "@expo/vector-icons";
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
@@ -14,6 +14,7 @@ import LandingScreen from "../screens/LandingPage";
 import Cart from "../screens/Cart";
 import ProductDetail from "../screens/ProductDetail";
 import StartupScreen from "../screens/StartupScreens";
+import Fav from "../screens/Fav";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -57,6 +58,7 @@ function MainTabs() {
     >
       <Tab.Screen name="Landing" component={LandingScreen} />
       <Tab.Screen name="Cart" component={Cart} />
+      <Tab.Screen name="fav" component={Fav} />
     </Tab.Navigator>
   );
 }
@@ -65,13 +67,8 @@ export default function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {/* Initial screen */}
         <Stack.Screen name="Startup" component={StartupScreen} />
-
-        {/* Tabs */}
         <Stack.Screen name="MainTabs" component={MainTabs} />
-
-        {/* Other stack screens */}
         <Stack.Screen name="ProductDetail" component={ProductDetail} />
       </Stack.Navigator>
     </NavigationContainer>
